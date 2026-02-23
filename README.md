@@ -8,8 +8,7 @@ The [portfolio page](https://kchoover14.github.io/mapping-conflict-indigenous-ch
 
 ## Tools & Technologies
 
-**Tools:** QGIS, Web Mercator projection, ESRI Gray (light) basemap (XYZ tile service -- see note below)  
-**Data:** Global Terrorism Database (GTD) -- University of Maryland START Center (https://www.start.umd.edu/data-tools/GTD)
+**Tools:** QGIS, Web Mercator projection, ESRI Gray (light) basemap (XYZ tile service -- see note below)
 
 **Note on basemap:** The ESRI Gray (light) basemap is an XYZ tile service and does not package into the geopackage. To reproduce the map with the original basemap, add a new XYZ tile connection in QGIS:
 - Name: ESRI Gray (light)
