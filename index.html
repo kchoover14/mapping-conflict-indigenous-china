@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kara C. Hoover">
-<meta name="dcterms.date" content="2023-10-01">
 
 <title>Terrorism In China is Concentrated in Uyghur Areas</title>
 <style>
@@ -56,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
   <li><a href="#research-answers" id="toc-research-answers" class="nav-link" data-scroll-target="#research-answers">Research Answers</a></li>
   <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design">Study Design</a></li>
-  <li><a href="#data-code" id="toc-data-code" class="nav-link" data-scroll-target="#data-code">Data &amp; Code</a></li>
+  <li><a href="#project-resources" id="toc-project-resources" class="nav-link" data-scroll-target="#project-resources">Project Resources</a></li>
   <li><a href="#tools-technologies" id="toc-tools-technologies" class="nav-link" data-scroll-target="#tools-technologies">Tools &amp; Technologies</a></li>
   <li><a href="#expertise" id="toc-expertise" class="nav-link" data-scroll-target="#expertise">Expertise</a></li>
   </ul>
@@ -90,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2023</p>
+      <p class="date">October 2023</p>
     </div>
   </div>
   
@@ -114,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Armed assault and bombing/explosion account for the two dominant attack types; smaller categories (facility attack, hijacking, unarmed assault, hostage taking, assassination, unknown) were consolidated for visualization.</li>
 <li>Lethality varies across attack types and locations; kill counts range from 0 to 50 per event, with the highest-lethality events concentrated in the same geographic zones as attack frequency.</li>
 </ul>
-<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -128,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>Is terrorism in China geographically random, or does it concentrate in specific regions – and if so, what does that spatial pattern reveal about the relationship between ethnic identity and political violence?</p>
+<p>Is terrorism in China geographically random, or does it concentrate in specific regions?</p>
 <hr>
 </section>
 <section id="research-answers" class="level2">
@@ -161,23 +160,35 @@ ul.task-list li input[type="checkbox"] {
 <p>Projection: Web Mercator. Basemap: ESRI Gray (light). GWID: G30867171.</p>
 <hr>
 </section>
-<section id="data-code" class="level2">
-<h2 class="anchored" data-anchor-id="data-code">Data &amp; Code</h2>
-<p>Repository: <a href="https://github.com/kchoover14/mapping-conflict-indigenous-china">github.com/kchoover14/mapping-conflict-indigenous-china</a></p>
-<p>Available in this repository: QGIS geopackage (layers, symbology, data), a separate csv of data subset used for the map, and final map with layout applied (not available to export in geopackage). Source data are publicly available from the <a href="https://www.start.umd.edu/data-tools/GTD">GTD at the University of Maryland START Center</a>.</p>
-<p><strong>Note on basemap:</strong> The ESRI Gray (light) basemap is an XYZ tile service and cannot be packaged into a geopackage – it is a live connection to an external tile server. To reproduce the map with the original basemap, add a new XYZ tile connection in QGIS with the following settings:</p>
+<section id="project-resources" class="level2">
+<h2 class="anchored" data-anchor-id="project-resources">Project Resources</h2>
+<p><strong>Repository:</strong> <a href="https://github.com/kchoover14/mapping-conflict-indigenous-china">github.com/kchoover14/mapping-conflict-indigenous-china</a></p>
+<p><strong>Data:</strong> Global Terrorism Database (GTD) – publicly available from the <a href="https://www.start.umd.edu/data-tools/GTD">University of Maryland START Center</a>. Filtered to China, 2010–2018. A CSV of the data subset used for the map is included in the repo.</p>
+<p><strong>Code:</strong></p>
+<ul>
+<li><code>mapping-conflict-indigenous-china.gpkg</code> – QGIS geopackage containing layers, symbology, and data</li>
+</ul>
+<p><strong>Project Artifacts:</strong></p>
+<ul>
+<li><code>map-conflict-indigenous-china.jpeg</code> – final map with layout applied (not reproducible from geopackage alone – see basemap note below)</li>
+</ul>
+<p><strong>Basemap note:</strong> The ESRI Gray (light) basemap is an XYZ tile service and cannot be packaged into the geopackage. To reproduce the map with the original basemap, add a new XYZ tile connection in QGIS:</p>
 <ul>
 <li>Name: ESRI Gray (light)</li>
 <li>URL: <code>http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}</code></li>
 <li>CRS: EPSG:3857</li>
 <li>Min zoom: 0 / Max zoom: 20</li>
 </ul>
+<p><strong>License:</strong></p>
+<ul>
+<li>Code and scripts © Kara C. Hoover, licensed under the <a href="LICENSE">MIT License</a>.</li>
+<li>Data, figures, and written content © Kara C. Hoover, licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</li>
+</ul>
 <hr>
 </section>
 <section id="tools-technologies" class="level2">
 <h2 class="anchored" data-anchor-id="tools-technologies">Tools &amp; Technologies</h2>
-<p><strong>Languages &amp; Tools:</strong> QGIS, Web Mercator projection, ESRI Gray basemap</p>
-<p><strong>Data:</strong> Global Terrorism Database (GTD) – University of Maryland START Center</p>
+<p><strong>Tools:</strong> QGIS | Web Mercator projection | ESRI Gray (light) basemap</p>
 <hr>
 </section>
 <section id="expertise" class="level2">
